@@ -1,0 +1,302 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth !important;
+    overflow: hidden;
+    background-color: white;
+  }
+  h1, p, a, .badge, span, h4, h5 {
+      user-select: none; /* Prevents text selection */
+  }
+
+  /* Loading Screen Styles */
+  #loadingScreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    z-index: 1050;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeOut 1s forwards;
+  }
+
+  .spinner-border {
+    width: 4rem;
+    height: 4rem;
+    border-width: 0.5em;
+    animation: rotate 2s linear infinite;
+  }
+
+  @keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  @keyframes fadeOut {
+    0% { opacity: 1; }
+    100% { opacity: 0; visibility: hidden; }
+  }
+
+  /* Header styles */
+  #header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1030;
+    background-color: white;
+    padding: 1rem;
+    transition: all 0.3s ease-in-out;
+    animation: slideIn 0.5s ease-out;
+  }
+
+  @keyframes slideIn {
+    0% { transform: translateY(-50%); }
+    100% { transform: translateY(0); }
+  }
+
+  .navbar-scrolled {
+    background-color: #f8f9fa;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Section styles */
+  section {
+    height: auto; /* Allow content to grow */
+    min-height: 100vh; 
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    align-items: center;
+    opacity: 0;
+    animation: fadeInUp 1s forwards;
+  }
+
+  .home-section {
+      position: relative;
+      background: linear-gradient(
+          to bottom,               /* Gradient direction */
+          transparent,             /* Start with no color at the top */
+          rgba(255, 255, 255, 1) /* Fade to white with opacity */
+      ), url("https://cdna.artstation.com/p/assets/images/images/054/914/386/original/squaresprout-deer-lake-slim.gif?1665663701");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+  }
+
+  .about-section {
+    position: relative;
+    background: linear-gradient(
+        to bottom,               /* Gradient direction */
+        rgba(255, 255, 255, 1),  /* Start with transparent at the top */
+        rgba(255, 255, 255, 0),  /* Fade to white in the middle */
+        rgba(255, 255, 255, 0),  /* Continue the white fade in the middle */
+        rgba(255, 255, 255, 1)   /* Fade to transparent at the bottom */
+    ), url("https://i.pinimg.com/originals/d3/17/4f/d3174fd38eacc87924eceb4dc334e159.gif");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    }
+    .about-section1 {
+        position: relative;
+        background: linear-gradient(
+            to bottom,               /* Gradient direction */
+            rgba(255, 255, 255, 1),  /* Start with transparent at the top */
+            rgba(255, 255, 255, 0),  /* Fade to white in the middle */
+            rgba(255, 255, 255, 0),  /* Continue the white fade in the middle */
+            rgba(255, 255, 255, 1)   /* Fade to transparent at the bottom */
+        ), url("https://i.pinimg.com/originals/66/94/11/669411a8a3da9affd30c9f89364918f2.gif");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(5px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  h1 {
+      font-weight: bold;
+    font-size: 3rem;
+    color: #333;
+    animation: fadeIn 1.5s ease-in-out;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+
+  h1:hover {
+    transform: scale(1.1);
+    color: #36d7b7;
+  }
+
+  .about-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: white;
+    padding: 50px;
+    flex-wrap: wrap;
+  }
+
+  @media (max-width: 768px) {
+    .about-section {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .about-photo {
+      margin-left: 35px !important;
+      margin-bottom: 20px;
+    }
+
+    .about-content {
+      max-width: 100%;
+      text-align: center !important;
+    }
+  }
+
+  .about-content {
+    max-width: 600px;
+  }
+
+  .about-content h1 {
+    font-weight: bold;
+    font-size: 3rem;
+    color: #333;
+    animation: fadeIn 1.5s ease-in-out;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  .about-content h1:hover {
+    transform: scale(1.05);
+    color: #36d7b7;
+  }
+
+  .about-content p {
+    font-size: 1rem;
+    color: #2a2b2a;
+    line-height: 1.8;
+    animation: fadeIn 1.5s ease-in-out;
+    transition: color 0.3s ease;
+  }
+
+  .about-content p:hover {
+    color: #36d7b7;
+  }
+
+  p {
+    color: #0a0a0a9a;
+    animation: fadeIn 1.5s ease-in-out;
+    transition: color 0.3s ease;
+  }
+
+  p:hover {
+    color: #36d7b7;
+  }
+  .about-photo {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin-left: 250px;
+    animation: slideIn 1.5s ease-out;
+    transition: transform 0.3s ease;
+  }
+
+  .about-photo img {
+    border-radius: 50%;
+    border: 10px solid #eee;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .about-photo:hover {
+    transform: scale(1.1);
+  }
+
+  .badge {
+    border-radius: 25px;
+    margin: 5px;
+    animation: fadeIn 2s ease-in-out;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+
+  .badge:hover {
+    transform: scale(1.05);
+  }
+
+  /* Custom "Hello I'm" Badge */
+  .badge-hello {
+    background-color: #36d7b7;
+    font-size: 1rem;
+    font-style: bold !important;
+    padding: 0.5rem 1.2rem;
+    color: white;
+    border-radius: 25px;
+    animation: fadeIn 2s ease-in-out;
+    transition: transform 0.3s ease;
+  }
+
+  .badge-hello:hover {
+    transform: scale(1.05);
+  }
+
+
+  .card{
+      transition: transform 0.3s ease;
+  }
+
+  .card:hover{
+      transform: scale(1.05);
+  }
+
+  .social-icons a {
+    color: #555;
+    font-size: 2rem;
+    margin-right: 15px;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+
+  .social-icons a:hover {
+    color: #36d7b7;
+    transform: scale(1.2);
+  }
+
+  .social-icons a i {
+    transition: transform 0.3s ease;
+  }
+
+  .social-icons a:hover i {
+    transform: rotate(20deg);
+  }
+
+  .bg-home {
+    background-color: white;
+  }
+
+  .btn-text {
+      font-family: Candara;
+      font-size: large;
+  }
+  .btn-text:hover{
+      color: #28a745;
+      transition: transform 0.5s ease;
+  }
+  .content-wrapper{
+      background-color: white !important;
+  }
+
+  footer{
+    padding: 20px;
+    background-color: white;
+}
